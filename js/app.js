@@ -1,6 +1,6 @@
 // Logika Antarmuka & Router Aplikasi Pilih KB Bunda
 // Puskesmas Pracimantoro 1, Kabupaten Wonogiri
-// Desain Modern Soft Pink, Rounded Typography, Visual Gambar Menarik
+// Desain Soft Pink, 4 Menu Bawah, Video Edukasi Pasang, Tanpa Spam Chat Dokter
 
 document.addEventListener("DOMContentLoaded", () => {
   initApp();
@@ -20,6 +20,7 @@ function initApp() {
   renderMitosList();
   setupQuiz();
   setupContactForm();
+  setupVideoTabs();
   
   handleHashNavigation();
   window.addEventListener("hashchange", handleHashNavigation);
@@ -32,11 +33,6 @@ function renderPuskesmasInfo() {
   document.querySelectorAll(".puskesmas-name").forEach(el => el.textContent = config.puskesmas.name);
   document.querySelectorAll(".puskesmas-district").forEach(el => el.textContent = config.puskesmas.district);
   document.querySelectorAll(".doctor-phone").forEach(el => el.textContent = config.contact.phoneDisplay);
-
-  const waHeroBtn = document.getElementById("btn-wa-hero");
-  if (waHeroBtn) {
-    waHeroBtn.href = config.contact.getWhatsAppUrl("Halo Dokter Puskesmas Pracimantoro 1, saya ingin konsultasi mengenai pilihan KB.");
-  }
 }
 
 function setupNavigation() {
@@ -74,9 +70,12 @@ function switchView(viewName) {
     activeView.classList.add("view-enter");
   }
 
-  // Update Nav Desktop & Mobile Bottom Bar
+  // Update Nav Desktop & Mobile Bottom Bar (4 Menu)
   document.querySelectorAll("[data-nav]").forEach(btn => {
-    const isTarget = btn.getAttribute("data-nav") === viewName;
+    const target = btn.getAttribute("data-nav");
+    // Untuk tab mobile 'panduan', aktif jika view adalah panduan, mitos, atau kontak
+    const isTarget = (target === viewName) || (target === "panduan" && (viewName === "mitos" || viewName === "kontak"));
+    
     if (btn.classList.contains("nav-item-bottom")) {
       const iconSvg = btn.querySelector("svg");
       const textSpan = btn.querySelector(".nav-text");
@@ -92,7 +91,7 @@ function switchView(viewName) {
         if (iconSvg) iconSvg.classList.remove("stroke-[2.5px]");
       }
     } else if (btn.classList.contains("nav-item-desktop")) {
-      if (isTarget) {
+      if (target === viewName) {
         btn.classList.add("nav-link-active");
       } else {
         btn.classList.remove("nav-link-active");
@@ -103,7 +102,7 @@ function switchView(viewName) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Render Katalog Alokon dengan Gambar Menarik & Teks Ringkas
+// Render Katalog Alokon dengan Ilustrasi Akurat (Tanpa Spam Tombol Chat Dokter)
 function renderKatalogAlokon(filterCategory = "all") {
   const container = document.getElementById("katalog-container");
   if (!container) return;
@@ -117,6 +116,8 @@ function renderKatalogAlokon(filterCategory = "all") {
   });
 
   container.innerHTML = filtered.map(item => {
+    const illustrationSvg = window.getAlokonIllustration ? window.getAlokonIllustration(item.tipeVisual) : "";
+
     const plusItems = item.plus.map(p => `
       <li class="text-xs text-slate-700 flex items-start gap-1.5 leading-snug">
         <span class="text-[#d46376] font-bold select-none">•</span>
@@ -132,27 +133,27 @@ function renderKatalogAlokon(filterCategory = "all") {
     `).join("");
 
     return `
-      <div class="rounded-box flex flex-col justify-between">
+      <div class="rounded-box flex flex-col justify-between bg-white border border-[#f0e1e4]">
         <div>
-          <!-- Gambar Menarik -->
-          <div class="h-44 w-full overflow-hidden bg-slate-100 relative">
-            <img src="${item.image}" alt="${item.nama}" class="img-cover hover:scale-105 transition-transform duration-300">
-            <div class="absolute top-3 left-3">
-              <span class="badge-pill badge-green shadow-sm">${item.statusBpjs}</span>
+          <!-- Ilustrasi Medis Akurat -->
+          <div class="h-44 w-full overflow-hidden border-b border-[#f3cbd2] relative">
+            ${illustrationSvg}
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-pill badge-green shadow-xs">${item.statusBpjs}</span>
             </div>
-            <div class="absolute top-3 right-3">
-              <span class="badge-pill bg-white/95 text-slate-800 shadow-sm">Durasi: ${item.durasi}</span>
+            <div class="absolute top-2.5 right-2.5">
+              <span class="badge-pill bg-white/95 text-slate-800 shadow-xs border border-slate-200">Durasi: ${item.durasi}</span>
             </div>
           </div>
 
-          <!-- Konten Ringkas -->
+          <!-- Konten Ringkas Padat -->
           <div class="p-5 space-y-3">
             <div>
-              <h3 class="text-lg font-bold text-slate-900 leading-tight">${item.nama}</h3>
-              <p class="text-xs text-[#d46376] font-semibold">${item.sebutan}</p>
+              <h3 class="text-lg font-black text-slate-900 leading-tight">${item.nama}</h3>
+              <p class="text-xs text-[#d46376] font-bold mt-0.5">${item.sebutan}</p>
             </div>
 
-            <p class="text-xs text-slate-600 leading-relaxed">${item.ringkasan}</p>
+            <p class="text-xs text-slate-600 leading-relaxed font-semibold">${item.ringkasan}</p>
 
             ${item.catatanPuskesmas ? `
               <div class="p-2.5 bg-[#fdf2f4] rounded-xl text-xs text-slate-700 leading-snug border border-[#f3cbd2]">
@@ -160,7 +161,7 @@ function renderKatalogAlokon(filterCategory = "all") {
               </div>
             ` : ""}
 
-            <div class="space-y-2 pt-1">
+            <div class="space-y-2 pt-1 font-semibold">
               <div>
                 <span class="text-[11px] font-extrabold uppercase tracking-wide text-slate-500 block mb-1">Kelebihan:</span>
                 <ul class="space-y-1">
@@ -169,7 +170,7 @@ function renderKatalogAlokon(filterCategory = "all") {
               </div>
 
               <div class="pt-1.5 border-t border-slate-100">
-                <span class="text-[11px] font-extrabold uppercase tracking-wide text-slate-400 block mb-1">Hal yang Perlu Diketahui:</span>
+                <span class="text-[11px] font-extrabold uppercase tracking-wide text-slate-400 block mb-1">Perlu Diperhatikan:</span>
                 <ul class="space-y-1">
                   ${minusItems}
                 </ul>
@@ -179,16 +180,24 @@ function renderKatalogAlokon(filterCategory = "all") {
         </div>
 
         <div class="p-5 pt-0">
-          <a href="${window.APP_CONFIG.contact.getWhatsAppUrl(`Halo Dokter Puskesmas Pracimantoro 1, saya ingin konsultasi mengenai ${item.nama}.`)}" 
-             target="_blank" rel="noopener noreferrer"
-             class="btn-rounded-outline w-full text-xs text-center py-2.5">
-            Tanya Dokter tentang ${item.nama}
+          <a href="#panduan" data-nav="panduan" class="w-full text-center py-2.5 px-4 rounded-full text-xs font-bold bg-[#fbe6ea] text-[#843443] hover:bg-[#f7cfd6] transition-colors block">
+            Lihat Panduan & Video Pasang →
           </a>
         </div>
       </div>
     `;
   }).join("");
 
+  // Bind klik nav panduan pada tombol kartu
+  container.querySelectorAll("[data-nav='panduan']").forEach(btn => {
+    btn.onclick = (e) => {
+      e.preventDefault();
+      switchView("panduan");
+      window.location.hash = "panduan";
+    };
+  });
+
+  // Filter Buttons
   document.querySelectorAll("[data-filter]").forEach(btn => {
     btn.onclick = () => {
       document.querySelectorAll("[data-filter]").forEach(b => {
@@ -202,7 +211,7 @@ function renderKatalogAlokon(filterCategory = "all") {
   });
 }
 
-// Render Mitos vs Fakta Ringkas
+// Render Mitos vs Fakta
 function renderMitosList() {
   const container = document.getElementById("mitos-container");
   if (!container) return;
@@ -211,22 +220,22 @@ function renderMitosList() {
   container.innerHTML = list.map((item, idx) => {
     const num = String(idx + 1).padStart(2, '0');
     return `
-      <div class="rounded-box p-5 md:p-6 mb-3">
+      <div class="rounded-box p-5 md:p-6 mb-3 bg-white border border-[#f0e1e4]">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-bold text-[#d46376]">Mitos #${num}</span>
+          <span class="text-xs font-black text-[#d46376]">Mitos #${num}</span>
           <span class="badge-pill badge-pink">Penjelasan Medis</span>
         </div>
         
-        <h3 class="text-base font-extrabold text-slate-900 mb-2 leading-snug">
+        <h3 class="text-base font-black text-slate-900 mb-2 leading-snug">
           "${item.mitos}"
         </h3>
 
-        <div class="p-3.5 bg-[#fdf2f4] rounded-xl border border-[#f3cbd2] space-y-1">
-          <p class="text-xs font-extrabold text-[#d46376] uppercase tracking-wide">${item.fakta}</p>
-          <p class="text-xs text-slate-700 leading-relaxed">${item.penjelasan}</p>
+        <div class="p-3.5 bg-[#fdf2f4] rounded-2xl border border-[#f3cbd2] space-y-1">
+          <p class="text-xs font-black text-[#d46376] uppercase tracking-wide">${item.fakta}</p>
+          <p class="text-xs text-slate-700 font-semibold leading-relaxed">${item.penjelasan}</p>
           ${item.tipsDokter ? `
             <p class="text-xs text-slate-500 italic pt-1">
-              <strong>Saran Bidan/Dokter:</strong> ${item.tipsDokter}
+              <strong>Saran Dokter:</strong> ${item.tipsDokter}
             </p>
           ` : ""}
         </div>
@@ -235,7 +244,37 @@ function renderMitosList() {
   }).join("");
 }
 
-// Logika Kuis Interaktif
+// Logika Tab Video Edukasi Pemasangan IUD & Implan
+function setupVideoTabs() {
+  const tabIud = document.getElementById("tab-video-iud");
+  const tabImplan = document.getElementById("tab-video-implan");
+  const frameIud = document.getElementById("video-frame-iud");
+  const frameImplan = document.getElementById("video-frame-implan");
+
+  if (!tabIud || !tabImplan) return;
+
+  tabIud.onclick = () => {
+    tabIud.classList.add("bg-[#d46376]", "text-white");
+    tabIud.classList.remove("bg-white", "text-slate-600");
+    tabImplan.classList.remove("bg-[#d46376]", "text-white");
+    tabImplan.classList.add("bg-white", "text-slate-600");
+
+    frameIud.classList.remove("hidden");
+    frameImplan.classList.add("hidden");
+  };
+
+  tabImplan.onclick = () => {
+    tabImplan.classList.add("bg-[#d46376]", "text-white");
+    tabImplan.classList.remove("bg-white", "text-slate-600");
+    tabIud.classList.remove("bg-[#d46376]", "text-white");
+    tabIud.classList.add("bg-white", "text-slate-600");
+
+    frameImplan.classList.remove("hidden");
+    frameIud.classList.add("hidden");
+  };
+}
+
+// Kuis Logika
 function setupQuiz() {
   const startBtn = document.getElementById("btn-start-quiz");
   if (startBtn) {
@@ -279,8 +318,8 @@ function renderQuizStep() {
   optionsContainer.innerHTML = currentQ.options.map(opt => `
     <button type="button" data-val="${opt.value}" 
             class="quiz-option-btn w-full text-left p-4 rounded-2xl border-2 border-slate-200 bg-white hover:border-[#d46376] hover:bg-[#fdf2f4]/60 transition-all">
-      <div class="font-extrabold text-slate-900 text-sm leading-snug mb-0.5">${opt.label}</div>
-      <div class="text-xs text-slate-500 leading-normal">${opt.desc}</div>
+      <div class="font-black text-slate-900 text-sm leading-snug mb-0.5">${opt.label}</div>
+      <div class="text-xs text-slate-500 font-semibold leading-normal">${opt.desc}</div>
     </button>
   `).join("");
 
@@ -334,19 +373,19 @@ function renderQuizResult(result) {
     const data = window.DATA_ALOKON.find(a => a.id === item.alokonId);
     if (!data) return "";
     return `
-      <div class="p-5 rounded-2xl bg-gradient-to-br from-[#d46376] to-[#be4c60] text-white shadow-md mb-3">
+      <div class="p-5 rounded-2xl bg-[#d46376] text-white shadow-sm mb-3">
         <div class="flex items-center justify-between gap-2 mb-1.5">
-          <span class="text-xs font-extrabold bg-white/20 px-3 py-1 rounded-full uppercase tracking-wider">
-            Paling Cocok Buat Bunda
+          <span class="text-xs font-black bg-white/20 px-3 py-1 rounded-full uppercase tracking-wider">
+            Pilihan Paling Pas
           </span>
-          <span class="text-xs font-semibold bg-black/15 px-2.5 py-0.5 rounded-full">Durasi: ${data.durasi}</span>
+          <span class="text-xs font-bold bg-black/15 px-2.5 py-0.5 rounded-full">Durasi: ${data.durasi}</span>
         </div>
         <h3 class="text-xl font-black mb-0.5">${data.nama}</h3>
-        <p class="text-xs text-white/90 font-medium mb-2">${data.sebutan}</p>
-        <p class="text-xs bg-white/10 p-3 rounded-xl border border-white/20 leading-relaxed mb-2">
+        <p class="text-xs text-white/90 font-bold mb-2">${data.sebutan}</p>
+        <p class="text-xs bg-white/10 p-3 rounded-xl border border-white/20 leading-relaxed font-semibold mb-2">
           <strong>Alasan:</strong> ${item.alasan}
         </p>
-        <span class="text-xs text-white/90">Layanan: ${data.statusBpjs} di Puskesmas Pracimantoro 1</span>
+        <span class="text-xs text-white/90 font-bold">Layanan: ${data.statusBpjs} di Puskesmas Pracimantoro 1</span>
       </div>
     `;
   }).join("");
@@ -360,10 +399,10 @@ function renderQuizResult(result) {
       return `
         <div class="p-3 rounded-xl border border-slate-200 bg-white mb-2">
           <div class="flex items-center justify-between">
-            <span class="font-extrabold text-slate-900 text-xs">${data.nama}</span>
-            <span class="text-[11px] text-slate-500 font-semibold">${data.durasi}</span>
+            <span class="font-black text-slate-900 text-xs">${data.nama}</span>
+            <span class="text-[11px] text-slate-500 font-bold">${data.durasi}</span>
           </div>
-          <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">${item.alasan}</p>
+          <p class="text-xs text-slate-600 mt-0.5 font-semibold leading-relaxed">${item.alasan}</p>
         </div>
       `;
     }).join("");
@@ -379,8 +418,8 @@ function renderQuizResult(result) {
       if (!data) return "";
       return `
         <div class="p-3 rounded-xl border border-rose-200 bg-rose-50/70 mb-2">
-          <span class="font-extrabold text-rose-900 text-xs">${data.nama}</span>
-          <p class="text-xs text-rose-800 mt-0.5 leading-relaxed">${item.alasan}</p>
+          <span class="font-black text-rose-900 text-xs">${data.nama}</span>
+          <p class="text-xs text-rose-800 mt-0.5 font-semibold leading-relaxed">${item.alasan}</p>
         </div>
       `;
     }).join("");
