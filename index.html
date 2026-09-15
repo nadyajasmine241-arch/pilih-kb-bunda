@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Pilih KB Bunda — Puskesmas Pracimantoro 1</title>
+  <meta name="description" content="Website panduan dan kuis pilihan KB interaktif untuk ibu-ibu di Puskesmas Pracimantoro 1, Wonogiri. Seluruh alokon gratis dengan BPJS.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pink: {
+              50: '#fdf2f4',
+              100: '#fbe6ea',
+              200: '#f7cfd6',
+              300: '#efaab7',
+              400: '#e37b8f',
+              500: '#d46376',
+              600: '#be4c60',
+              700: '#9f3c4e',
+              800: '#843443',
+              900: '#70303b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Font: Nunito (Rounded) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#faf5f6] text-[#2b2325]">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#fbe6ea] border-b border-[#f3cbd2] text-[#843443] text-xs py-2 px-4 text-center font-bold tracking-wide">
+    Puskesmas Pracimantoro 1 &bull; Semua Pelayanan & Alat KB 100% GRATIS dengan BPJS / KIS
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#f0e1e4]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Title -->
+      <a href="#home" data-nav="home" class="block">
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-[#d46376] block leading-none">Pilih KB Bunda</span>
+        <span class="text-[11px] font-bold text-slate-500 block mt-0.5">Puskesmas Pracimantoro 1, Wonogiri</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-5 text-xs font-bold text-slate-600">
+        <a href="#home" data-nav="home" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors nav-link-active">Beranda</a>
+        <a href="#quiz" data-nav="quiz" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Cek KB</a>
+        <a href="#katalog" data-nav="katalog" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Katalog KB</a>
+        <a href="#mitos" data-nav="mitos" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Mitos & Fakta</a>
+        <a href="#panduan" data-nav="panduan" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Panduan Pasang</a>
+        <a href="#kontak" data-nav="kontak" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Kontak</a>
+      </nav>
+
+      <!-- Button WA Dokter -->
+      <div class="hidden sm:block">
+        <a id="btn-wa-hero" href="https://wa.me/628973281555" target="_blank" rel="noopener noreferrer"
+           class="btn-rounded-pink text-xs py-2 px-4 shadow-sm">
+          Tanya Dokter WA
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content-wrapper max-w-5xl mx-auto px-4 sm:px-6 py-6 md:py-8">
+
+    <!-- ================================================================= -->
+    <!-- VIEW 1: BERANDA                                                   -->
+    <!-- ================================================================= -->
+    <section id="view-home" class="page-view space-y-8">
+      
+      <!-- Hero Banner dengan Foto Menarik & Teks Ringkas -->
+      <div class="rounded-box p-6 sm:p-8 bg-white border border-[#f0e1e4]">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          
+          <div class="md:col-span-7 space-y-3">
+            <span class="badge-pill badge-pink">Sahabat Ibu Pracimantoro</span>
+            
+            <h1 class="text-2xl sm:text-4xl font-black text-slate-900 leading-tight">
+              Pilih KB yang Tepat & Nyaman Sesuai Kondisi Bunda
+            </h1>
+            
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-semibold">
+              Punya riwayat tensi tinggi, masih menyusui, atau takut berat badan naik? Cari tahu alat KB yang paling aman untuk Bunda dalam 2 menit.
+            </p>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="#quiz" data-nav="quiz" class="btn-rounded-pink text-sm">
+                Cek KB yang Pas (Kuis 2 Menit)
+              </a>
+              <a href="#katalog" data-nav="katalog" class="btn-rounded-outline text-sm">
+                Lihat Pilihan KB
+              </a>
+            </div>
+
+            <div class="pt-2 flex items-center gap-4 text-xs font-bold text-slate-500">
+              <span class="flex items-center gap-1.5 text-emerald-800">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                Gratis BPJS
+              </span>
+              <span class="flex items-center gap-1.5 text-[#d46376]">
+                <span class="w-2 h-2 rounded-full bg-[#d46376]"></span>
+                Standar Medis WHO
+              </span>
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <div class="h-60 sm:h-72 w-full rounded-2xl overflow-hidden shadow-sm border border-[#f3cbd2]">
+              <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=900&q=80" 
+                   alt="Ibu dan Bayi Sehat" class="img-cover">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 4 Pintu Akses Cepat (Cards dengan Gambar Visual) -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-base sm:text-lg font-black text-slate-900">Menu Pilihan Bunda</h2>
+          <span class="text-xs font-bold text-[#d46376]">Puskesmas Pracimantoro 1</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <a href="#quiz" data-nav="quiz" class="rounded-box block group">
+            <div class="h-32 w-full overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" 
+                   alt="Kuis Pilihan KB" class="img-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-4 space-y-1">
+              <h3 class="font-black text-slate-900 text-sm group-hover:text-[#d46376] transition-colors">Kuis Cek KB</h3>
+              <p class="text-xs text-slate-500 leading-snug">Jawab 4 pertanyaan untuk rekomendasi otomatis.</p>
+            </div>
+          </a>
+
+          <a href="#katalog" data-nav="katalog" class="rounded-box block group">
+            <div class="h-32 w-full overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" 
+                   alt="Katalog Alokon" class="img-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-4 space-y-1">
+              <h3 class="font-black text-slate-900 text-sm group-hover:text-[#d46376] transition-colors">Katalog KB</h3>
+              <p class="text-xs text-slate-500 leading-snug">Bandingkan plus-minus IUD, Implan, Suntik, dan Pil.</p>
+            </div>
+          </a>
+
+          <a href="#mitos" data-nav="mitos" class="rounded-box block group">
+            <div class="h-32 w-full overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=80" 
+                   alt="Mitos vs Fakta" class="img-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-4 space-y-1">
+              <h3 class="font-black text-slate-900 text-sm group-hover:text-[#d46376] transition-colors">Mitos vs Fakta</h3>
+              <p class="text-xs text-slate-500 leading-snug">Kupas tuntas ketakutan seputar IUD dan Implan.</p>
+            </div>
+          </a>
+
+          <a href="#panduan" data-nav="panduan" class="rounded-box block group">
+            <div class="h-32 w-full overflow-hidden bg-slate-100">
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" 
+                   alt="Panduan Pasang" class="img-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-4 space-y-1">
+              <h3 class="font-black text-slate-900 text-sm group-hover:text-[#d46376] transition-colors">Panduan Pasang</h3>
+              <p class="text-xs text-slate-500 leading-snug">Berkas bawaan dan tips agar tidak cemas.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Pesan Edukasi Singkat & Padat -->
+      <div class="rounded-box p-6 bg-[#fdf2f4] border border-[#f3cbd2] flex flex-col sm:flex-row items-center gap-5">
+        <div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-white shadow-sm">
+          <img src="https://images.unsplash.com/photo-1594824813579-052445b27a3c?auto=format&fit=crop&w=200&q=80" 
+               alt="Dokter Puskesmas" class="img-cover">
+        </div>
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="badge-pill bg-white text-[#d46376]">Tips Dokter Puskesmas Pracimantoro 1</span>
+          <p class="text-xs sm:text-sm text-slate-700 font-bold leading-relaxed">
+            "Jika Bunda punya darah tinggi atau ingin berat badan stabil, beralih ke <strong>IUD Copper T (Bebas Hormon)</strong> adalah solusi paling aman dan praktis hingga 8 tahun."
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIEW 2: KUIS REKOMENDASI                                          -->
+    <!-- ================================================================= -->
+    <section id="view-quiz" class="page-view hidden space-y-6">
+      
+      <!-- Intro Card -->
+      <div id="quiz-intro-card" class="rounded-box p-6 sm:p-8 text-center space-y-4 max-w-xl mx-auto">
+        <span class="badge-pill badge-pink">Kuis 2 Menit</span>
+        <h2 class="text-2xl font-black text-slate-900">Cek KB yang Pas Buat Bunda</h2>
+        <p class="text-xs sm:text-sm text-slate-600 font-semibold leading-relaxed">
+          Jawab 4 pertanyaan singkat mengenai rencana anak, status menyusui, dan riwayat kesehatan Bunda untuk mendapatkan rekomendasi yang aman.
+        </p>
+        <div class="pt-2">
+          <button id="btn-start-quiz" type="button" class="btn-rounded-pink text-sm px-8 py-3">
+            Mulai Kuis Sekarang
+          </button>
+        </div>
+      </div>
+
+      <!-- Wizard Step Card -->
+      <div id="quiz-step-card" class="rounded-box p-6 sm:p-8 hidden space-y-5 max-w-xl mx-auto">
+        <div class="flex items-center justify-between border-b border-[#f0e1e4] pb-2 text-xs font-bold text-slate-500">
+          <span id="quiz-step-indicator">Langkah 1 dari 4</span>
+          <button id="quiz-back-btn" type="button" class="text-[#d46376] hover:underline hidden">
+            Sebelumnya
+          </button>
+        </div>
+
+        <div>
+          <h3 id="quiz-question-title" class="text-lg font-black text-slate-900 leading-tight">
+            Pertanyaan
+          </h3>
+          <p id="quiz-question-subtitle" class="text-xs text-slate-500 font-semibold mt-0.5">
+            Keterangan
+          </p>
+        </div>
+
+        <div id="quiz-options-container" class="space-y-2.5">
+          <!-- Diisi via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Hasil Kuis -->
+      <div id="quiz-result-card" class="rounded-box p-6 sm:p-8 hidden space-y-5 max-w-xl mx-auto">
+        <div class="text-center space-y-1 border-b border-[#f0e1e4] pb-3">
+          <span class="badge-pill badge-green">Hasil Analisis</span>
+          <h2 class="text-2xl font-black text-slate-900">Rekomendasi KB Bunda</h2>
+        </div>
+
+        <div>
+          <div id="result-utama-container">
+            <!-- Diisi via JavaScript -->
+          </div>
+        </div>
+
+        <div id="section-alternatif" class="hidden">
+          <span class="text-xs font-extrabold uppercase tracking-wide text-slate-500 block mb-1">Alternatif Lain yang Aman:</span>
+          <div id="result-alternatif-container">
+            <!-- Diisi via JavaScript -->
+          </div>
+        </div>
+
+        <div id="section-hindari" class="hidden">
+          <span class="text-xs font-extrabold uppercase tracking-wide text-rose-700 block mb-1">Sebaiknya Dihindari:</span>
+          <div id="result-hindari-container">
+            <!-- Diisi via JavaScript -->
+          </div>
+        </div>
+
+        <!-- Form Kirim WA -->
+        <div class="p-4 bg-[#fdf2f4] rounded-2xl border border-[#f3cbd2] space-y-3">
+          <h4 class="text-xs font-black text-slate-900 uppercase tracking-wide">Konsultasikan Hasil Ini ke Dokter:</h4>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" id="input-nama-bunda" placeholder="Nama Bunda" class="input-rounded text-xs">
+            <input type="number" id="input-usia-bunda" placeholder="Usia (Tahun)" class="input-rounded text-xs">
+          </div>
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <button id="btn-send-quiz-wa" type="button" class="btn-rounded-pink text-xs flex-1 py-2.5">
+              Kirim ke WA Dokter (0897-3281-555)
+            </button>
+            <button id="btn-print-result" type="button" class="btn-rounded-outline text-xs py-2.5 px-4">
+              Cetak
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center pt-1">
+          <button id="btn-restart-quiz" type="button" class="text-xs text-slate-500 hover:text-[#d46376] font-bold underline">
+            Ulangi Kuis
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIEW 3: KATALOG KB                                                -->
+    <!-- ================================================================= -->
+    <section id="view-katalog" class="page-view hidden space-y-6">
+      
+      <div class="text-center max-w-xl mx-auto space-y-1">
+        <span class="badge-pill badge-pink">Lengkap di Puskesmas Pracimantoro 1</span>
+        <h2 class="text-2xl font-black text-slate-900">Katalog Pilihan KB</h2>
+        <p class="text-xs text-slate-600 font-semibold">Semua alokon di bawah ini tercover BPJS / Gratis.</p>
+      </div>
+
+      <!-- Filter Kategori -->
+      <div class="flex items-center justify-center gap-2 overflow-x-auto pb-1">
+        <button type="button" data-filter="all" class="px-4 py-2 rounded-full text-xs font-bold bg-[#d46376] text-white shadow-sm">
+          Semua
+        </button>
+        <button type="button" data-filter="mkjp" class="px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200">
+          Jangka Panjang (IUD & Implan)
+        </button>
+        <button type="button" data-filter="non-hormonal" class="px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200">
+          Bebas Hormon (IUD)
+        </button>
+        <button type="button" data-filter="hormonal" class="px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-600 border border-slate-200">
+          Hormonal (Suntik & Pil)
+        </button>
+      </div>
+
+      <!-- Grid Katalog Alokon -->
+      <div id="katalog-container" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Diisi via JavaScript -->
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIEW 4: MITOS VS FAKTA                                            -->
+    <!-- ================================================================= -->
+    <section id="view-mitos" class="page-view hidden space-y-6">
+      
+      <div class="text-center max-w-xl mx-auto space-y-1">
+        <span class="badge-pill badge-pink">Penjelasan Dokter</span>
+        <h2 class="text-2xl font-black text-slate-900">Mitos vs Fakta KB</h2>
+        <p class="text-xs text-slate-600 font-semibold">Jangan takut kabar burung, ini penjelasan medisnya.</p>
+      </div>
+
+      <div id="mitos-container" class="max-w-2xl mx-auto space-y-3">
+        <!-- Diisi via JavaScript -->
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIEW 5: PANDUAN PASANG                                            -->
+    <!-- ================================================================= -->
+    <section id="view-panduan" class="page-view hidden space-y-6">
+      
+      <div class="text-center max-w-xl mx-auto space-y-1">
+        <span class="badge-pill badge-pink">Persiapan Nyaman</span>
+        <h2 class="text-2xl font-black text-slate-900">Panduan Menuju Puskesmas</h2>
+        <p class="text-xs text-slate-600 font-semibold">Tips agar proses pemasangan lancar dan tenang.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        <div class="rounded-box p-6 space-y-2">
+          <span class="badge-pill bg-[#fdf2f4] text-[#d46376]">Berkas Bawaan</span>
+          <h3 class="text-base font-black text-slate-900">Yang Perlu Dibawa:</h3>
+          <ul class="space-y-1.5 text-xs text-slate-700 font-semibold">
+            <li>• Kartu BPJS / KIS aktif (gratis biaya).</li>
+            <li>• KTP atau Kartu Keluarga (KK).</li>
+            <li>• Buku KIA (Buku Pink) bagi yang baru melahirkan.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-box p-6 space-y-2">
+          <span class="badge-pill bg-[#fdf2f4] text-[#d46376]">Waktu Terbaik</span>
+          <h3 class="text-base font-black text-slate-900">Kapan Waktu Terbaik Pasang?</h3>
+          <ul class="space-y-1.5 text-xs text-slate-700 font-semibold">
+            <li>• <strong>IUD:</strong> Saat hari terakhir haid (leher rahim terbuka alami).</li>
+            <li>• <strong>Pascapersalinan:</strong> Langsung setelah melahirkan.</li>
+            <li>• <strong>Implan:</strong> Kapan saja selama tidak hamil.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="rounded-box p-6 space-y-3">
+        <h3 class="text-base font-black text-slate-900">Bagaimana Rasanya Saat Pasang?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 font-semibold">
+          <div class="p-4 bg-[#fdf2f4] rounded-2xl border border-[#f3cbd2] space-y-1">
+            <strong class="text-slate-900 text-sm block">IUD (5-10 Menit):</strong>
+            Hanya mules sebentar seperti kram haid. Cukup tarik napas panjang dan buat badan rileks.
+          </div>
+          <div class="p-4 bg-[#fdf2f4] rounded-2xl border border-[#f3cbd2] space-y-1">
+            <strong class="text-slate-900 text-sm block">Implan (Kurang dari 5 Menit):</strong>
+            Ada bius lokal di kulit lengan bagian dalam, jadi saat dipasang sudah mati rasa dan tidak sakit.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIEW 6: KONTAK & JADWAL                                           -->
+    <!-- ================================================================= -->
+    <section id="view-kontak" class="page-view hidden space-y-6">
+      
+      <div class="text-center max-w-xl mx-auto space-y-1">
+        <span class="badge-pill badge-pink">Puskesmas Pracimantoro 1</span>
+        <h2 class="text-2xl font-black text-slate-900">Jadwal & Kontak Dokter</h2>
+        <p class="text-xs text-slate-600 font-semibold">Pelayanan ramah untuk keluarga sehat Wonogiri.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        <div class="rounded-box p-6 space-y-3">
+          <h3 class="text-base font-black text-slate-900">Jadwal Poli KIA / KB</h3>
+          <div class="space-y-2 text-xs font-bold">
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-600">Senin – Kamis</span>
+              <span class="text-[#d46376]">08.00 – 12.00 WIB</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-600">Jumat</span>
+              <span class="text-[#d46376]">08.00 – 11.00 WIB</span>
+            </div>
+            <div class="flex justify-between py-2">
+              <span class="text-slate-600">Sabtu</span>
+              <span class="text-[#d46376]">08.00 – 11.30 WIB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-box p-6 space-y-3">
+          <h3 class="text-base font-black text-slate-900">Tanya Dokter via WhatsApp</h3>
+          <p class="text-xs text-slate-600 font-semibold">Konsultasi pribadi sebelum datang ke Puskesmas:</p>
+          <div class="space-y-2">
+            <input type="text" id="kontak-nama" placeholder="Nama Bunda" class="input-rounded text-xs">
+            <textarea id="kontak-pesan" rows="2" placeholder="Pertanyaan seputar KB" class="input-rounded text-xs"></textarea>
+            <button id="btn-direct-wa" type="button" class="btn-rounded-dark w-full text-xs py-3">
+              Kirim Pesan WhatsApp (0897-3281-555)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#f0e1e4] py-8 text-center text-xs text-slate-500 space-y-1 bg-white">
+    <div class="max-w-4xl mx-auto px-4 font-semibold">
+      <p class="font-extrabold text-slate-700">Pilih KB Bunda &bull; Puskesmas Pracimantoro 1</p>
+      <p>Kecamatan Pracimantoro, Kabupaten Wonogiri, Jawa Tengah</p>
+      <p class="text-[11px] text-slate-400 pt-1">
+        Pemberitahuan Medis: Edukasi awal sebelum pemeriksaan fisik langsung oleh dokter atau bidan di Puskesmas.
+      </p>
+      <p class="text-[10px] text-slate-400 pt-1">&copy; 2026 Tim Medis Puskesmas Pracimantoro 1.</p>
+    </div>
+  </footer>
+
+  <!-- ================================================================= -->
+  <!-- MOBILE BOTTOM NAVIGATION BAR (SIMPLE CLEAN ICONS)                 -->
+  <!-- ================================================================= -->
+  <div id="bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-[#f0e1e4] py-2 px-1 flex items-center justify-around shadow-lg">
+    
+    <!-- Beranda -->
+    <a href="#home" data-nav="home" class="nav-item-bottom flex flex-col items-center gap-0.5 text-[#d46376] px-2 py-1">
+      <svg class="w-5 h-5 stroke-current fill-none stroke-[2px]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span class="nav-text text-[10px] font-extrabold">Beranda</span>
+    </a>
+
+    <!-- Cek KB -->
+    <a href="#quiz" data-nav="quiz" class="nav-item-bottom flex flex-col items-center gap-0.5 text-slate-400 px-2 py-1">
+      <svg class="w-5 h-5 stroke-current fill-none stroke-[2px]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 11l3 3L22 4"/>
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+      </svg>
+      <span class="nav-text text-[10px] font-semibold">Cek KB</span>
+    </a>
+
+    <!-- Katalog -->
+    <a href="#katalog" data-nav="katalog" class="nav-item-bottom flex flex-col items-center gap-0.5 text-slate-400 px-2 py-1">
+      <svg class="w-5 h-5 stroke-current fill-none stroke-[2px]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7"/>
+        <rect x="14" y="3" width="7" height="7"/>
+        <rect x="14" y="14" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/>
+      </svg>
+      <span class="nav-text text-[10px] font-semibold">Katalog</span>
+    </a>
+
+    <!-- Mitos -->
+    <a href="#mitos" data-nav="mitos" class="nav-item-bottom flex flex-col items-center gap-0.5 text-slate-400 px-2 py-1">
+      <svg class="w-5 h-5 stroke-current fill-none stroke-[2px]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="9" y1="18" x2="15" y2="18"/>
+        <line x1="10" y1="22" x2="14" y2="22"/>
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+      </svg>
+      <span class="nav-text text-[10px] font-semibold">Mitos</span>
+    </a>
+
+    <!-- Panduan -->
+    <a href="#panduan" data-nav="panduan" class="nav-item-bottom flex flex-col items-center gap-0.5 text-slate-400 px-2 py-1">
+      <svg class="w-5 h-5 stroke-current fill-none stroke-[2px]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      </svg>
+      <span class="nav-text text-[10px] font-semibold">Panduan</span>
+    </a>
+
+    <!-- Kontak -->
+    <a href="#kontak" data-nav="kontak" class="nav-item-bottom flex flex-col items-center gap-0.5 text-slate-400 px-2 py-1">
+      <svg class="w-5 h-5 stroke-current fill-none stroke-[2px]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <span class="nav-text text-[10px] font-semibold">Kontak</span>
+    </a>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/data-alokon.js"></script>
+  <script src="js/data-mitos.js"></script>
+  <script src="js/quiz-engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

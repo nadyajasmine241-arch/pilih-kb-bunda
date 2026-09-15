@@ -1,0 +1,20 @@
+{
+  "name": "pilih-kb-bunda",
+  "version": "1.0.0",
+  "description": "Website Edukasi dan Penentu Pilihan KB Interaktif untuk Ibu-Ibu di Wilayah Kerja Puskesmas Pracimantoro 1, Wonogiri",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "kb",
+    "puskesmas-pracimantoro-1",
+    "wonogiri",
+    "keluarga-berencana",
+    "kesehatan-ibu",
+    "iud",
+    "implan"
+  ],
+  "author": "Dokter Puskesmas Pracimantoro 1",
+  "license": "MIT"
+}
