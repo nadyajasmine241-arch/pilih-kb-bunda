@@ -1,6 +1,6 @@
-# 🌸 Pilih KB Bunda — Puskesmas Pracimantoro 1, Wonogiri
+# 🌸 SEKAR-PRIMA — Sistem Edukasi Keluarga Berencana Puskesmas Pracimantoro 1
 
-Website edukasi interaktif dan *Decision Support System* sederhana untuk membantu ibu-ibu (Bunda) di wilayah kerja **Puskesmas Pracimantoro 1, Kabupaten Wonogiri** dalam memilih metode kontrasepsi (KB) yang paling aman, nyaman, dan minim efek samping.
+Website edukasi interaktif dan *Decision Support System* untuk membantu ibu-ibu di wilayah kerja **Puskesmas Pracimantoro 1, Kabupaten Wonogiri** dalam memilih metode kontrasepsi (KB) yang paling aman, nyaman, dan minim efek samping.
 
 ---
 
@@ -16,12 +16,10 @@ Website edukasi interaktif dan *Decision Support System* sederhana untuk membant
    - Penjelasan transparan kelebihan (plus), kekurangan (minus), durasi proteksi, dan status **100% GRATIS dengan BPJS / KIS**.
 3. **💡 Mitos vs Fakta Seputar KB**:
    - Membongkar ketakutan lokal: apakah IUD berkarat/pindah organ, apakah implan membuat tangan lemas untuk kerja di sawah/kebun, dan meluruskan mitos darah kotor tertimbun akibat suntik 3 bulan.
-4. **🩺 Panduan Kunjungan & Pasang Nyaman**:
+4. **🩺 Panduan Kunjungan & Video Edukasi Pasang (IUD & Implan)**:
+   - Video tata cara pemasangan IUD (AKDR) & Implan (Susuk).
    - Berkas yang perlu dibawa (KTP, BPJS/KIS, Buku KIA).
-   - Waktu terbaik pasang IUD (hari terakhir haid).
-   - Tips relaksasi menghilangkan fobia rasa sakit saat pemasangan.
-5. **📞 Kontak & Jadwal Poli KIA / KB**:
-   - Terhubung langsung ke WhatsApp dokter: `0897-3281-555`.
+   - Waktu terbaik pasang IUD (hari terakhir haid) & tips relaksasi menghilangkan fobia rasa sakit saat pemasangan.
 
 ---
 

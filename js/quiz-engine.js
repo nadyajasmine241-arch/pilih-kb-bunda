@@ -274,7 +274,7 @@ function generateWhatsAppConsultationMessage(result, namaBunda = "Pasien", usiaB
   }).join(" atau ");
 
   let text = `Yth. Dokter Puskesmas Pracimantoro 1,%0A%0A`;
-  text += `Saya ingin berkonsultasi mengenai pelayanan KB. Berikut ringkasan penapisan awal dari website Pilih KB Bunda:%0A%0A`;
+  text += `Saya ingin berkonsultasi mengenai pelayanan KB. Berikut ringkasan penapisan awal dari SEKAR-PRIMA (Puskesmas Pracimantoro 1):%0A%0A`;
   text += `- Nama: ${encodeURIComponent(namaBunda || "Pasien")}%0A`;
   if (usiaBunda) text += `- Usia: ${encodeURIComponent(usiaBunda)} tahun%0A`;
   text += `- Rencana Anak: ${encodeURIComponent(labelParitas)}%0A`;

@@ -19,7 +19,6 @@ function initApp() {
   renderKatalogAlokon();
   renderMitosList();
   setupQuiz();
-  setupContactForm();
   setupVideoTabs();
   
   handleHashNavigation();
@@ -49,7 +48,7 @@ function setupNavigation() {
 
 function handleHashNavigation() {
   const hash = window.location.hash.replace("#", "");
-  const validViews = ["home", "quiz", "katalog", "mitos", "panduan", "kontak"];
+  const validViews = ["home", "quiz", "katalog", "mitos", "panduan"];
   if (validViews.includes(hash)) {
     switchView(hash);
   } else {
@@ -73,8 +72,8 @@ function switchView(viewName) {
   // Update Nav Desktop & Mobile Bottom Bar (4 Menu)
   document.querySelectorAll("[data-nav]").forEach(btn => {
     const target = btn.getAttribute("data-nav");
-    // Untuk tab mobile 'panduan', aktif jika view adalah panduan, mitos, atau kontak
-    const isTarget = (target === viewName) || (target === "panduan" && (viewName === "mitos" || viewName === "kontak"));
+    // Untuk tab mobile 'panduan', aktif jika view adalah panduan atau mitos
+    const isTarget = (target === viewName) || (target === "panduan" && viewName === "mitos");
     
     if (btn.classList.contains("nav-item-bottom")) {
       const iconSvg = btn.querySelector("svg");
@@ -446,20 +445,3 @@ function renderQuizResult(result) {
   }
 }
 
-function setupContactForm() {
-  const directWaBtn = document.getElementById("btn-direct-wa");
-  if (directWaBtn) {
-    directWaBtn.onclick = () => {
-      const nama = document.getElementById("kontak-nama").value.trim() || "Bunda";
-      const pesan = document.getElementById("kontak-pesan").value.trim();
-      let text = `Halo Dokter Puskesmas Pracimantoro 1, perkenalkan saya ${nama}.%0A%0A`;
-      if (pesan) {
-        text += `Pertanyaan:%0A${encodeURIComponent(pesan)}%0A%0A`;
-      } else {
-        text += `Saya ingin berkonsultasi mengenai pelayanan KB di Puskesmas Pracimantoro 1.%0A%0A`;
-      }
-      text += `Terima kasih banyak, Dok.`;
-      window.open(`https://wa.me/${window.APP_CONFIG.contact.whatsappNumber}?text=${text}`, "_blank");
-    };
-  }
-}

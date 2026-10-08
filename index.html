@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Pilih KB Bunda — Puskesmas Pracimantoro 1</title>
-  <meta name="description" content="Website edukasi, video panduan pasang, dan kuis pilihan KB untuk ibu-ibu di Puskesmas Pracimantoro 1, Wonogiri. Seluruh alokon gratis BPJS.">
+  <title>SEKAR-PRIMA — Sistem Edukasi KB Puskesmas Pracimantoro 1</title>
+  <meta name="description" content="SEKAR-PRIMA: Sistem Edukasi Keluarga Berencana Puskesmas Pracimantoro 1, Wonogiri. Edukasi pilihan KB, video pemasangan IUD & Implan, penapisan mandiri, dan alokon gratis BPJS.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -50,10 +50,13 @@
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#f0e1e4]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
       
-      <!-- Brand Title -->
-      <a href="#home" data-nav="home" class="block">
-        <span class="text-xl sm:text-2xl font-black tracking-tight text-[#d46376] block leading-none">Pilih KB Bunda</span>
-        <span class="text-[11px] font-bold text-slate-500 block mt-0.5">Puskesmas Pracimantoro 1 &bull; Wonogiri</span>
+      <!-- Brand Title with Logo -->
+      <a href="#home" data-nav="home" class="flex items-center gap-3">
+        <img src="img/logo.png" alt="Logo SEKAR-PRIMA" class="h-10 sm:h-12 w-auto object-contain rounded-md">
+        <div>
+          <span class="text-lg sm:text-2xl font-black tracking-tight text-[#d46376] block leading-none">SEKAR-PRIMA</span>
+          <span class="text-[10px] sm:text-[11px] font-bold text-slate-500 block mt-0.5">Sistem Edukasi KB &bull; Puskesmas Pracimantoro 1</span>
+        </div>
       </a>
 
       <!-- Desktop Nav Links (Lengkap untuk Desktop) -->
@@ -63,7 +66,6 @@
         <a href="#katalog" data-nav="katalog" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Pilihan KB</a>
         <a href="#panduan" data-nav="panduan" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Panduan & Video Pasang</a>
         <a href="#mitos" data-nav="mitos" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Mitos & Fakta</a>
-        <a href="#kontak" data-nav="kontak" class="nav-item-desktop py-1 hover:text-[#d46376] transition-colors">Jadwal & Kontak</a>
       </nav>
 
       <!-- Jadwal Cepat di Desktop -->
@@ -515,65 +517,17 @@
 
     </section>
 
-    <!-- ================================================================= -->
-    <!-- VIEW 6: JADWAL & KONTAK RESMI PUSKESMAS                          -->
-    <!-- ================================================================= -->
-    <section id="view-kontak" class="page-view hidden space-y-6">
-      
-      <div class="text-center max-w-xl mx-auto space-y-1">
-        <span class="badge-pill badge-pink">Puskesmas Pracimantoro 1</span>
-        <h2 class="text-2xl font-black text-slate-900">Jadwal Pelayanan & Kontak</h2>
-        <p class="text-xs text-slate-600 font-semibold">Layanan kesehatan keluarga ramah dan profesional di Pracimantoro, Wonogiri.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-        
-        <div class="rounded-box p-6 bg-white border border-[#f0e1e4] space-y-3">
-          <h3 class="text-base font-black text-slate-900">Jadwal Poli KIA / KB</h3>
-          <div class="space-y-2 text-xs font-bold">
-            <div class="flex justify-between py-2 border-b border-slate-100">
-              <span class="text-slate-600">Senin – Kamis</span>
-              <span class="text-[#d46376]">08.00 – 12.00 WIB</span>
-            </div>
-            <div class="flex justify-between py-2 border-b border-slate-100">
-              <span class="text-slate-600">Jumat</span>
-              <span class="text-[#d46376]">08.00 – 11.00 WIB</span>
-            </div>
-            <div class="flex justify-between py-2">
-              <span class="text-slate-600">Sabtu</span>
-              <span class="text-[#d46376]">08.00 – 11.30 WIB</span>
-            </div>
-          </div>
-          <p class="text-[11px] text-slate-400 font-semibold pt-1">
-            *Untuk pemasangan IUD atau Implan, disarankan datang lebih awal di pagi hari.
-          </p>
-        </div>
-
-        <div class="rounded-box p-6 bg-white border border-[#f0e1e4] space-y-3">
-          <h3 class="text-base font-black text-slate-900">Konsultasi dengan Dokter</h3>
-          <p class="text-xs text-slate-600 font-semibold leading-relaxed">
-            Jika ada keluhan atau pertanyaan khusus sebelum berkunjung:
-          </p>
-          <div class="space-y-2 pt-1">
-            <input type="text" id="kontak-nama" placeholder="Nama Bunda" class="input-rounded text-xs">
-            <textarea id="kontak-pesan" rows="2" placeholder="Pertanyaan seputar pelayanan KB" class="input-rounded text-xs"></textarea>
-            <button id="btn-direct-wa" type="button" class="btn-rounded-pink w-full text-xs py-3">
-              Kirim Pesan WhatsApp (0897-3281-555)
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-[#f0e1e4] py-8 text-center text-xs text-slate-500 space-y-1 bg-white">
+  <footer class="border-t border-[#f0e1e4] py-8 text-center text-xs text-slate-500 space-y-2 bg-white">
     <div class="max-w-4xl mx-auto px-4 font-semibold">
-      <p class="font-black text-slate-800">Pilih KB Bunda &bull; Puskesmas Pracimantoro 1</p>
-      <p>Kecamatan Pracimantoro, Kabupaten Wonogiri, Jawa Tengah</p>
+      <div class="flex items-center justify-center gap-2 mb-1">
+        <img src="img/logo.png" alt="Logo SEKAR-PRIMA" class="h-8 w-auto object-contain rounded">
+        <span class="font-black text-slate-900 text-sm">SEKAR-PRIMA</span>
+      </div>
+      <p class="font-bold text-slate-700">Sistem Edukasi Keluarga Berencana Puskesmas Pracimantoro 1</p>
+      <p class="text-slate-500">Kecamatan Pracimantoro, Kabupaten Wonogiri, Jawa Tengah</p>
       <p class="text-[11px] text-slate-400 pt-1">
         Pemberitahuan Medis: Edukasi pendahuluan sebelum pemeriksaan fisik langsung oleh dokter atau bidan di Puskesmas.
       </p>

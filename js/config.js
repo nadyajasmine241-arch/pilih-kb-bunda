@@ -1,9 +1,9 @@
-// Konfigurasi Utama Website Pilih KB Bunda
-// Puskesmas Pracimantoro 1, Kabupaten Wonogiri
+// Konfigurasi Utama Website SEKAR-PRIMA
+// Sistem Edukasi Keluarga Berencana Puskesmas Pracimantoro 1
 
 const APP_CONFIG = {
-  appName: "Pilih KB Bunda",
-  tagline: "Panduan Sahabat Bunda Memilih Kontrasepsi Aman & Tepat",
+  appName: "SEKAR-PRIMA",
+  tagline: "Sistem Edukasi Keluarga Berencana Puskesmas Pracimantoro 1",
   puskesmas: {
     name: "Puskesmas Pracimantoro 1",
     district: "Kecamatan Pracimantoro, Kabupaten Wonogiri",
